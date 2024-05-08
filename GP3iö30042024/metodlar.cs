@@ -46,6 +46,8 @@ namespace GP3iö30042024
             MessageBox.Show("Kaydedildi","Randevu Kayıt",MessageBoxButtons.YesNo,MessageBoxIcon.Asterisk);
             
         }
+        
+      
 
     }
 }

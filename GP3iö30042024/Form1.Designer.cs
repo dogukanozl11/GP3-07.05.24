@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lstPoliklinik = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.lstDoktorlar = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.lstSaat = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtHastaAd = new System.Windows.Forms.TextBox();
             this.txtHastaTc = new System.Windows.Forms.TextBox();
@@ -41,19 +41,20 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnRandevuAl = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnRandevuSil = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // listBox1
+            // lstPoliklinik
             // 
-            this.listBox1.DisplayMember = "pol";
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 33);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(89, 108);
-            this.listBox1.TabIndex = 0;
-            this.listBox1.ValueMember = "polno";
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.lstPoliklinik.DisplayMember = "pol";
+            this.lstPoliklinik.FormattingEnabled = true;
+            this.lstPoliklinik.Location = new System.Drawing.Point(12, 33);
+            this.lstPoliklinik.Name = "lstPoliklinik";
+            this.lstPoliklinik.Size = new System.Drawing.Size(89, 108);
+            this.lstPoliklinik.TabIndex = 0;
+            this.lstPoliklinik.ValueMember = "polno";
+            this.lstPoliklinik.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -64,15 +65,15 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Poliklinikler:";
             // 
-            // listBox2
+            // lstDoktorlar
             // 
-            this.listBox2.DisplayMember = "doktor";
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(108, 33);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(88, 108);
-            this.listBox2.TabIndex = 2;
-            this.listBox2.ValueMember = "doktorno";
+            this.lstDoktorlar.DisplayMember = "doktor";
+            this.lstDoktorlar.FormattingEnabled = true;
+            this.lstDoktorlar.Location = new System.Drawing.Point(108, 33);
+            this.lstDoktorlar.Name = "lstDoktorlar";
+            this.lstDoktorlar.Size = new System.Drawing.Size(88, 108);
+            this.lstDoktorlar.TabIndex = 2;
+            this.lstDoktorlar.ValueMember = "doktorno";
             // 
             // label2
             // 
@@ -91,13 +92,13 @@
             this.dateTimePicker1.TabIndex = 3;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // listBox3
+            // lstSaat
             // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(409, 33);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(73, 108);
-            this.listBox3.TabIndex = 4;
+            this.lstSaat.FormattingEnabled = true;
+            this.lstSaat.Location = new System.Drawing.Point(409, 33);
+            this.lstSaat.Name = "lstSaat";
+            this.lstSaat.Size = new System.Drawing.Size(73, 108);
+            this.lstSaat.TabIndex = 4;
             // 
             // label3
             // 
@@ -142,9 +143,9 @@
             // 
             // btnRandevuAl
             // 
-            this.btnRandevuAl.Location = new System.Drawing.Point(328, 124);
+            this.btnRandevuAl.Location = new System.Drawing.Point(319, 124);
             this.btnRandevuAl.Name = "btnRandevuAl";
-            this.btnRandevuAl.Size = new System.Drawing.Size(75, 23);
+            this.btnRandevuAl.Size = new System.Drawing.Size(84, 23);
             this.btnRandevuAl.TabIndex = 7;
             this.btnRandevuAl.Text = "Randevu Al";
             this.btnRandevuAl.UseVisualStyleBackColor = true;
@@ -158,24 +159,35 @@
             this.dataGridView1.Size = new System.Drawing.Size(642, 208);
             this.dataGridView1.TabIndex = 8;
             // 
+            // btnRandevuSil
+            // 
+            this.btnRandevuSil.Location = new System.Drawing.Point(215, 124);
+            this.btnRandevuSil.Name = "btnRandevuSil";
+            this.btnRandevuSil.Size = new System.Drawing.Size(85, 23);
+            this.btnRandevuSil.TabIndex = 9;
+            this.btnRandevuSil.Text = "Randevu SİL";
+            this.btnRandevuSil.UseVisualStyleBackColor = true;
+            this.btnRandevuSil.Click += new System.EventHandler(this.btnRandevuSil_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(789, 423);
+            this.Controls.Add(this.btnRandevuSil);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnRandevuAl);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtHastaTc);
             this.Controls.Add(this.txtHastaAd);
-            this.Controls.Add(this.listBox3);
+            this.Controls.Add(this.lstSaat);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.lstDoktorlar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lstPoliklinik);
             this.Name = "Form1";
             this.Text = "Randevu AL";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -187,12 +199,12 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lstPoliklinik;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox lstDoktorlar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.ListBox lstSaat;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtHastaAd;
         private System.Windows.Forms.TextBox txtHastaTc;
@@ -200,6 +212,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnRandevuAl;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnRandevuSil;
     }
 }
 
